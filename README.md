@@ -57,7 +57,7 @@ npx cc-help
 
 ```bash
 # 克隆仓库
-git clone https://github.com/5ibug/cc-help.git
+git clone https://github.com/5ibug/claude-code-helper.git
 cd cc-help
 
 # 安装依赖
