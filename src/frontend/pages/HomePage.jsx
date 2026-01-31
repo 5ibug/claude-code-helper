@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import './EnvironmentPage.css';
+import './HomePage.css';
 
 const TOOLS = ['git', 'npm', 'node', 'pnpm', 'claude'];
 
@@ -159,7 +159,7 @@ export default function HomePage() {
                   {info.installed ? (
                     <div className="card-status installed">
                       <span className="status-badge">{t('common.installed')}</span>
-                      <span className="version-text">v{info.version}</span>
+                      <span className="version-text">{info.version}</span>
                     </div>
                   ) : (
                     <div className="card-status not-installed">

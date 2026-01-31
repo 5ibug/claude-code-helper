@@ -24,7 +24,7 @@ async function checkEnvironment() {
       if (info.installed) {
         const versionSpan = document.createElement('span');
         versionSpan.className = 'env-version';
-        versionSpan.textContent = `v${info.version}`;
+        versionSpan.textContent = info.version;
         rightDiv.appendChild(versionSpan);
       } else if (tool === 'claude' || tool === 'pnpm') {
         const btn = document.createElement('button');
