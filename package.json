@@ -1,6 +1,6 @@
 {
   "name": "cc-help",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Claude Code Helper - 轻量化 CLI 工具，帮助安装和配置 Claude Code",
   "type": "module",
   "bin": {
