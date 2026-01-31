@@ -2,6 +2,7 @@ import express from 'express';
 import portfinder from 'portfinder';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { readFileSync } from 'fs';
 import { openBrowser } from './services/launcher.js';
 import { checkAdminPermission, getPermissionWarning } from './services/permission-checker.js';
 import envRoutes from './routes/env.js';
@@ -12,6 +13,7 @@ import apiConfigRoutes from './routes/api-config.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = path.join(__dirname, '../dist');
+const packageJson = JSON.parse(readFileSync(path.join(__dirname, '../package.json'), 'utf-8'));
 
 export async function startServer() {
   const hasAdminPermission = await checkAdminPermission();
@@ -32,6 +34,10 @@ export async function startServer() {
   app.use('/api/config', configRoutes);
   app.use('/api/prompts', promptsRoutes);
   app.use('/api/api-config', apiConfigRoutes);
+
+  app.get('/api/version', (req, res) => {
+    res.json({ version: packageJson.version });
+  });
 
   app.get('*', (req, res) => {
     res.sendFile(path.join(DIST_DIR, 'index.html'));

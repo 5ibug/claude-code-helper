@@ -90,3 +90,17 @@
   overflow-y: auto;
   background: #f0f2f5;
 }
+
+.sidebar-footer {
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.version-text {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+  font-family: 'Courier New', monospace;
+}

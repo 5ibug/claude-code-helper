@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
 import './Layout.css';
 
 const MENU_ITEMS = [
@@ -10,6 +11,14 @@ const MENU_ITEMS = [
 
 export default function Layout({ currentPage, onPageChange, children }) {
   const { t, i18n } = useTranslation();
+  const [version, setVersion] = useState('');
+
+  useEffect(() => {
+    fetch('/api/version')
+      .then(res => res.json())
+      .then(data => setVersion(data.version))
+      .catch(err => console.error('Failed to fetch version:', err));
+  }, []);
 
   const toggleLanguage = () => {
     const newLang = i18n.language === 'zh' ? 'en' : 'zh';
@@ -38,6 +47,11 @@ export default function Layout({ currentPage, onPageChange, children }) {
             </button>
           ))}
         </nav>
+        {version && (
+          <div className="sidebar-footer">
+            <span className="version-text">v{version}</span>
+          </div>
+        )}
       </aside>
       <main className="main-content">
         {children}
