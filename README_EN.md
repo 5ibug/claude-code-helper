@@ -42,6 +42,10 @@ npx cc-help
 
 The program will automatically start a web interface and open the management panel in your browser.
 
+## Screenshots
+
+![Home Page](./images/home_en.png)
+
 ## System Requirements
 
 - Node.js >= 18.0.0
