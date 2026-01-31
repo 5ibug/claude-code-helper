@@ -32,3 +32,5 @@ openspec/
 
 # Claude 配置
 .claude/
+
+PUBLISH.md
