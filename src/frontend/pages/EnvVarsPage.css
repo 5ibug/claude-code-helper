@@ -1,0 +1,226 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.page-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 250px;
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+}
+
+.loading-state {
+  padding: 60px;
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+}
+
+.envvars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.envvar-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid #d9d9d9;
+}
+
+.envvar-card.is-set {
+  border-left-color: #52c41a;
+}
+
+.envvar-card.not-set {
+  border-left-color: #faad14;
+}
+
+.envvar-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  margin-bottom: 16px;
+}
+
+.var-name-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.var-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #262626;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-badge.set {
+  background: #f6ffed;
+  color: #52c41a;
+  border: 1px solid #b7eb8f;
+}
+
+.status-badge.unset {
+  background: #fffbe6;
+  color: #faad14;
+  border: 1px solid #ffe58f;
+}
+
+.var-description {
+  color: #595959;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.view-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.value-display {
+  flex: 1;
+  padding: 10px 14px;
+  background: #fafafa;
+  border-radius: 6px;
+  border: 1px solid #f0f0f0;
+}
+
+.value-text {
+  font-family: 'Courier New', monospace;
+  color: #262626;
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.value-placeholder {
+  font-family: 'Courier New', monospace;
+  color: #bfbfbf;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.edit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #1890ff;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.edit-input:focus {
+  outline: none;
+  border-color: #40a9ff;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.action-btn.edit {
+  background: linear-gradient(135deg, #1890ff, #40a9ff);
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(24, 144, 255, 0.2);
+}
+
+.action-btn.edit:hover {
+  background: linear-gradient(135deg, #40a9ff, #69c0ff);
+  box-shadow: 0 4px 8px rgba(24, 144, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.action-btn.save {
+  background: #f6ffed;
+  color: #52c41a;
+  border: 1px solid #b7eb8f;
+}
+
+.action-btn.save:hover {
+  background: #d9f7be;
+}
+
+.action-btn.cancel {
+  background: #f5f5f5;
+  color: #595959;
+}
+
+.action-btn.cancel:hover {
+  background: #e8e8e8;
+}
+
+.empty-state {
+  padding: 60px;
+  text-align: center;
+  color: #999;
+  font-size: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}

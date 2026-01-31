@@ -1,0 +1,58 @@
+{
+  "name": "cc-help",
+  "version": "1.0.1",
+  "description": "Claude Code Helper - 轻量化 CLI 工具，帮助安装和配置 Claude Code",
+  "type": "module",
+  "bin": {
+    "cc-help": "./bin/cc-help.js"
+  },
+  "main": "./src/server.js",
+  "files": [
+    "bin/",
+    "src/",
+    "dist/",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node bin/cc-help.js",
+    "build": "vite build",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "cli",
+    "helper",
+    "ai",
+    "assistant",
+    "development-tools"
+  ],
+  "author": "5ibug",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/5ibug/claude-code-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/5ibug/claude-code-helper/issues"
+  },
+  "homepage": "https://github.com/5ibug/claude-code-helper#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.6.2",
+    "express": "^4.18.0",
+    "i18next": "^25.8.0",
+    "open": "^10.0.0",
+    "portfinder": "^1.0.28",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^16.5.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.1.0"
+  }
+}
